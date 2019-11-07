@@ -1,0 +1,80 @@
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50vw, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
+  grid-gap: 1rem;
+}
+
+main .card {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+main .card:hover {
+  /*  background-color: red;
+            transition: background-color 1000ms; */
+}
+
+p {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 100%;
+}
+
+.cover .cover-headline {
+  margin: 10% auto 15%;
+  text-align: center;
+  height: 10vh;
+}
+
+.cover .cover-body {
+  background-color: yellow;
+  height: 90vh;
+}
+
+.intro .intro-headline {
+  margin: 10% auto 15%;
+  text-align: center;
+  height: 10vh;
+}
+
+.intro .intro-body {
+  background-color: blue;
+  height: 70vh;
+}
+
+.story .story-headline {
+  margin: 10% auto 15%;
+  text-align: center;
+  height: 10vh;
+}
+
+.story .story-body {
+  background-color: red;
+  height: 70vh;
+}
+
+.downlaod .download-headline {
+  margin: 10% auto 15%;
+  text-align: center;
+  height: 10vh;
+}
+
+.downlaod .download-body {
+  background-color: pink;
+  height: 70vh;
+}
+
+.html {
+  font-family: MaisonNeue, sans-serif;
+}
+
+.x-container {
+  padding: 0 8%;
+}
+/*# sourceMappingURL=main.css.map */

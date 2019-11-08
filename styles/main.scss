@@ -1,3 +1,35 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: red;
+}
+
+.nav-links {
+  display: flex;
+  width: 20vw;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.burger {
+  display: none;
+  div {
+    margin: 5px;
+    width: 25px;
+    height: 1px;
+    background-color: black;
+    transition: all 0.3s ease
+  }
+}
+
 p {
   -webkit-font-smoothing: antialiased;
 }
@@ -13,10 +45,8 @@ p {
     grid-area: story;
     width: 100%;
     .x-container {
+      padding: 0 5%;
 
-        padding: 0 5%;
-      
-      
       .x-grid {
         @media only screen and (min-width: 1200px) {
           grid-template-columns: 50% 50%;
@@ -49,7 +79,8 @@ p {
           width: 100%;
           display: flex;
           justify-content: center;
-         /*  
+          margin-top: 5vh;
+          /*  
         push item up on hover
          transition: transform 1s;
           &:hover {
@@ -58,11 +89,9 @@ p {
           img {
             align-self: center;
             max-width: 600px;
-            width: 100%; 
+            width: 100%;
             border-radius: 18px;
           }
-
-        
         }
         .story-body {
           flex-basis: 1;
@@ -74,9 +103,10 @@ p {
           display: block;
           font-size: 1.7rem;
           text-align: center;
+          text-rendering: optimizeLegibility;
         }
 
-        h2{
+        h2 {
           font-size: 4rem;
           line-height: 3.5rem;
         }
@@ -93,11 +123,62 @@ html {
     font-size: 10px;
   }
 
-
   font-size: 16px;
   font-family: MaisonNeue, sans-serif;
 }
 
 * {
   line-height: 2.5rem;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    width: 50%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+    li {
+      opacity: 0;
+    }
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }

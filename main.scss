@@ -17,11 +17,20 @@ main {
 p {
   -webkit-font-smoothing: antialiased;
 }
-img {
-  width: 100%;
+
+.landing {
+  display: grid;
+  grid-template-columns: 300px, 400px;
+  grid-template-rows: 300px, 300px 300px;
+  grid-template-areas: 
+  "cover cover"
+  "intro story"
+  "download download";
+  
 }
 
 .cover {
+  grid-area: cover;
   .cover-headline {
     margin: 10% auto 15%;
     text-align: center;
@@ -34,6 +43,8 @@ img {
 }
 
 .intro {
+  grid-area: intro;
+
   .intro-headline {
     margin: 10% auto 15%;
     text-align: center;
@@ -46,18 +57,67 @@ img {
 }
 
 .story {
-  .story-headline {
-    margin: 10% auto 15%;
-    text-align: center;
-    height: 10vh;
+  grid-area: story;
+
+  .x-container {
+    .x-grid{
+      @media only screen and (min-width: 1200px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50vh;
+        grid-template-areas: 
+         "story-headline story-illustration";
+      }
+      @media only screen and (min-width: 300px) and (max-width: 1200px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 40vh;
+        grid-template-areas: 
+        "story-headline"
+        "story-illustration";
+      }
+
+      display: grid;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0;
+
+      .story-headline {
+        grid-area: story-headline;
+        margin: 10% 5% 15%;
+        text-align: center;
+        justify-content: center;
+        justify-self: center;
+        width: 500px;
+
+      }
+      .story-illustration {
+        grid-area: story-illustration;
+        max-width: 100%;
+        min-width: 500px;
+        padding: 20% 5% 0;
+    
+        img{
+          width: 100%;
+        }
+      }
+      .story-body {
+        flex-basis: 1;
+        background-color: red;
+        height: 70vh;
+      }
+  
+      p{
+        display: block;
+        font-size: 1.7rem;
+        text-align: center;
+      }
+    }
   }
-  .story-body {
-    background-color: red;
-    height: 70vh;
-  }
+
+
 }
 
-.downlaod {
+.download {
+  grid-area: download;
     .download-headline{
         margin: 10% auto 15%;
         text-align: center;
@@ -67,6 +127,11 @@ img {
         background-color: pink;
         height: 70vh;
   }
+  .download-button{
+      height: 20vh;
+      background-color: grey;
+      margin: 10% 0 15%;
+  }
 }
 
 .html {
@@ -75,4 +140,8 @@ img {
 
 .x-container {
   padding: 0 8%;
+}
+
+* {
+  line-height: 2.54237rem;
 }

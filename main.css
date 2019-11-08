@@ -22,8 +22,21 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
-img {
-  width: 100%;
+.landing {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px, 400px;
+      grid-template-columns: 300px, 400px;
+  -ms-grid-rows: 300px, 300px 300px;
+      grid-template-rows: 300px, 300px 300px;
+      grid-template-areas: "cover cover" "intro story" "download download";
+}
+
+.cover {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cover;
 }
 
 .cover .cover-headline {
@@ -37,6 +50,12 @@ img {
   height: 90vh;
 }
 
+.intro {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: intro;
+}
+
 .intro .intro-headline {
   margin: 10% auto 15%;
   text-align: center;
@@ -48,26 +67,99 @@ img {
   height: 70vh;
 }
 
-.story .story-headline {
-  margin: 10% auto 15%;
-  text-align: center;
-  height: 10vh;
+.story {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: story;
 }
 
-.story .story-body {
+.story .x-container .x-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .story .x-container .x-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 50vh;
+        grid-template-rows: 50vh;
+        grid-template-areas: "story-headline story-illustration";
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+  .story .x-container .x-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 30vh 40vh;
+        grid-template-rows: 30vh 40vh;
+        grid-template-areas: "story-headline" "story-illustration";
+  }
+}
+
+.story .x-container .x-grid .story-headline {
+  grid-area: story-headline;
+  margin: 10% 5% 15%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 500px;
+}
+
+.story .x-container .x-grid .story-illustration {
+  grid-area: story-illustration;
+  max-width: 100%;
+  min-width: 500px;
+  padding: 20% 5% 0;
+}
+
+.story .x-container .x-grid .story-illustration img {
+  width: 100%;
+}
+
+.story .x-container .x-grid .story-body {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
   background-color: red;
   height: 70vh;
 }
 
-.downlaod .download-headline {
+.story .x-container .x-grid p {
+  display: block;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.download {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: download;
+}
+
+.download .download-headline {
   margin: 10% auto 15%;
   text-align: center;
   height: 10vh;
 }
 
-.downlaod .download-body {
+.download .download-body {
   background-color: pink;
   height: 70vh;
+}
+
+.download .download-button {
+  height: 20vh;
+  background-color: grey;
+  margin: 10% 0 15%;
 }
 
 .html {
@@ -76,5 +168,9 @@ img {
 
 .x-container {
   padding: 0 8%;
+}
+
+* {
+  line-height: 2.54237rem;
 }
 /*# sourceMappingURL=main.css.map */

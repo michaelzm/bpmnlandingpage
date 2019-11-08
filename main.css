@@ -25,10 +25,10 @@ p {
 .landing {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px, 400px;
-      grid-template-columns: 300px, 400px;
-  -ms-grid-rows: 300px, 300px 300px;
-      grid-template-rows: 300px, 300px 300px;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
+  -ms-grid-rows: 300px, 300px;
+      grid-template-rows: 300px, 300px;
       grid-template-areas: "cover cover" "intro story" "download download";
 }
 
@@ -96,8 +96,8 @@ p {
   .story .x-container .x-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 30vh 40vh;
-        grid-template-rows: 30vh 40vh;
+    -ms-grid-rows: 30vh 1fr;
+        grid-template-rows: 30vh 1fr;
         grid-template-areas: "story-headline" "story-illustration";
   }
 }
@@ -116,9 +116,8 @@ p {
 
 .story .x-container .x-grid .story-illustration {
   grid-area: story-illustration;
-  max-width: 100%;
+  width: 100%;
   min-width: 500px;
-  padding: 20% 5% 0;
 }
 
 .story .x-container .x-grid .story-illustration img {

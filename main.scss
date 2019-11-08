@@ -1,140 +1,84 @@
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
-  grid-gap: 1rem;
-
-  .card {
-    transition: transform 1s;
-
-    &:hover {
-      /*  background-color: red;
-            transition: background-color 1000ms; */
-      //ransform: translateY(-10px);
-    }
-  }
-}
-
 p {
   -webkit-font-smoothing: antialiased;
 }
 
-.landing {
+.page-grid {
   display: grid;
-  grid-template-columns: 1fr, 1fr;
-  grid-template-rows: 300px, 300px;
-  grid-template-areas: 
-  "cover cover"
-  "intro story"
-  "download download";
-  
-}
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-template-areas: "story";
+  width: 100%;
 
-.cover {
-  grid-area: cover;
-  .cover-headline {
-    margin: 10% auto 15%;
-    text-align: center;
-    height: 10vh;
-  }
-  .cover-body {
-    background-color: yellow;
-    height: 90vh;
-  }
-}
+  .story {
+    grid-area: story;
+    width: 100%;
+    .x-container {
 
-.intro {
-  grid-area: intro;
+      .x-grid {
+        @media only screen and (min-width: 1200px) {
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 50vh;
+          grid-template-areas: "story-headline story-illustration";
+        }
+        @media only screen and (min-width: 300px) and (max-width: 1200px) {
+          grid-template-columns: 100%;
+          grid-template-rows: auto 1fr;
+          grid-template-areas:
+            "story-headline"
+            "story-illustration";
+        }
 
-  .intro-headline {
-    margin: 10% auto 15%;
-    text-align: center;
-    height: 10vh;
-  }
-  .intro-body {
-    background-color: blue;
-    height: 70vh;
-  }
-}
-
-.story {
-  grid-area: story;
-
-  .x-container {
-    .x-grid{
-      @media only screen and (min-width: 1200px){
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50vh;
-        grid-template-areas: 
-         "story-headline story-illustration";
-      }
-      @media only screen and (min-width: 300px) and (max-width: 1200px){
-        grid-template-columns: 1fr;
-        grid-template-rows: 30vh 1fr;
-        grid-template-areas: 
-        "story-headline"
-        "story-illustration";
-      }
-
-      display: grid;
-      flex-wrap: wrap;
-      width: 100%;
-      margin: 0;
-
-      .story-headline {
-        grid-area: story-headline;
-        margin: 10% 5% 15%;
-        text-align: center;
-        justify-content: center;
-        justify-self: center;
-        width: 500px;
-
-      }
-      .story-illustration {
-        grid-area: story-illustration;
+        display: grid;
+        flex-wrap: wrap;
         width: 100%;
-        min-width: 500px;
-    
-        img{
+        margin: 0;
+
+        .story-headline {
+          grid-area: story-headline;
+          margin: 10% 5% 15%;
+          text-align: center;
+          justify-content: center;
+          justify-self: center;
+          width: 80%;
+        }
+        .story-illustration {
+          grid-area: story-illustration;
           width: 100%;
- 
+          display: flex;
+          justify-content: center;
+
+          img {
+            align-self: center;
+            max-width: 600px;
+            width: 100%;
+          }
+        }
+        .story-body {
+          flex-basis: 1;
+          background-color: red;
+          height: 70vh;
+        }
+
+        p {
+          display: block;
+          font-size: 1.7rem;
+          text-align: center;
         }
       }
-      .story-body {
-        flex-basis: 1;
-        background-color: red;
-        height: 70vh;
-      }
-  
-      p{
-        display: block;
-        font-size: 1.7rem;
-        text-align: center;
-      }
     }
-  }
-
-
-}
-
-.download {
-  grid-area: download;
-    .download-headline{
-        margin: 10% auto 15%;
-        text-align: center;
-        height: 10vh;
-    }
-    .download-body {
-        background-color: pink;
-        height: 70vh;
-  }
-  .download-button{
-      height: 20vh;
-      background-color: grey;
-      margin: 10% 0 15%;
   }
 }
 
-.html {
+html {
+  @media (max-width: 58em) {
+    font-size: 14px;
+  }
+  @media (max-width: 35.5em) {
+    font-size: 10px;
+  }
+
+
+  font-size: 16px;
   font-family: MaisonNeue, sans-serif;
 }
 
@@ -143,5 +87,5 @@ p {
 }
 
 * {
-  line-height: 2.54237rem;
+  line-height: 2.5rem;
 }

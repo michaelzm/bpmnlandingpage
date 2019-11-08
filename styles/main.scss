@@ -1,0 +1,103 @@
+p {
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-template-areas: "story";
+  width: 100%;
+
+  .story {
+    grid-area: story;
+    width: 100%;
+    .x-container {
+
+        padding: 0 5%;
+      
+      
+      .x-grid {
+        @media only screen and (min-width: 1200px) {
+          grid-template-columns: 50% 50%;
+          grid-template-rows: auto;
+          grid-template-areas: "story-headline story-illustration";
+        }
+        @media only screen and (min-width: 300px) and (max-width: 1200px) {
+          grid-template-columns: 100%;
+          grid-template-rows: auto 1fr;
+          grid-template-areas:
+            "story-headline"
+            "story-illustration";
+        }
+
+        display: grid;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+
+        .story-headline {
+          grid-area: story-headline;
+          margin: 10% 5% 15%;
+          text-align: center;
+          justify-content: center;
+          justify-self: center;
+          width: 80%;
+        }
+        .story-illustration {
+          grid-area: story-illustration;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+         /*  
+        push item up on hover
+         transition: transform 1s;
+          &:hover {
+            transform: translateY(-10px) ;
+          } */
+          img {
+            align-self: center;
+            max-width: 600px;
+            width: 100%; 
+            border-radius: 18px;
+          }
+
+        
+        }
+        .story-body {
+          flex-basis: 1;
+          background-color: red;
+          height: 70vh;
+        }
+
+        p {
+          display: block;
+          font-size: 1.7rem;
+          text-align: center;
+        }
+
+        h2{
+          font-size: 4rem;
+          line-height: 3.5rem;
+        }
+      }
+    }
+  }
+}
+
+html {
+  @media (max-width: 58em) {
+    font-size: 14px;
+  }
+  @media (max-width: 35.5em) {
+    font-size: 10px;
+  }
+
+
+  font-size: 16px;
+  font-family: MaisonNeue, sans-serif;
+}
+
+* {
+  line-height: 2.5rem;
+}

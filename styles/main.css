@@ -117,7 +117,7 @@ nav .logo {
 
 .page-grid .story .x-container .x-grid .story-headline {
   grid-area: story-headline;
-  margin: 10% 5% 15%;
+  margin: 5% 5% 5%;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -162,6 +162,7 @@ nav .logo {
 }
 
 .page-grid .story .x-container .x-grid p {
+  margin-top: 4vh;
   display: block;
   font-size: 1.7rem;
   text-align: center;
@@ -232,7 +233,7 @@ html {
     opacity: 0;
   }
   .nav-links li a {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .burger {
     display: -webkit-box;

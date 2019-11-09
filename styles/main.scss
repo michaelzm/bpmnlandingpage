@@ -48,7 +48,11 @@
           text-align: center;
           justify-content: center;
           justify-self: center;
-          width: 70%;
+
+          p {
+            padding: 0 10% 0 10%;
+          }
+
         }
 
         .story-illustration {
@@ -141,13 +145,13 @@
 
               .step-item-number {
 
-                @media (min-width: 1250px) {
+                @media (min-width: 1150px) {
                   height: 50px;
                   width: 50px;
                   margin-left: -13vw;
                 }
 
-                @media (min-width: 525px) and (max-width: 1250px) {
+                @media (min-width: 525px) and (max-width: 1150px) {
                   height: 40px;
                   width: 40px;
                   margin-left: -14vw;
@@ -234,13 +238,23 @@
             "feature-3";
         }
 
-        h4 {
-          height: 12vh;
-        }
-
         margin-top: 10vh;
         margin-bottom: 10vh;
         display: grid;
+
+        .feature {
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            flex: 1;
+          }
+
+          p {
+            flex: 2;
+            ;
+          }
+        }
 
         .feature-1 {
           grid-area: feature-1;

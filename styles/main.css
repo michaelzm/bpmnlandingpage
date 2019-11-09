@@ -3,9 +3,9 @@
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 10vh auto 10vh auto auto 10vh auto 10vh;
-      grid-template-rows: 10vh auto 10vh auto auto 10vh auto 10vh;
-      grid-template-areas: "." "story" '.' "steps" "features" "." "interest" '.';
+  -ms-grid-rows: 10vh auto 10vh auto auto auto 10vh;
+      grid-template-rows: 10vh auto 10vh auto auto auto 10vh;
+      grid-template-areas: "." "story" '.' "steps" "features" "interest" '.';
   width: 100%;
 }
 
@@ -302,7 +302,9 @@
 
 .page-grid .interest {
   width: 100%;
-  -ms-grid-row: 7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f7f8), to(white));
+  background: linear-gradient(180deg, #f6f7f8, white);
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: interest;
 }

@@ -194,7 +194,7 @@
   text-align: center;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1300px) {
   .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item .step-item-number {
     height: 50px;
     width: 50px;
@@ -202,7 +202,15 @@
   }
 }
 
-@media (min-width: 525px) and (max-width: 1150px) {
+@media (min-width: 850px) and (max-width: 1300px) {
+  .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item .step-item-number {
+    height: 40px;
+    width: 40px;
+    margin-left: -13vw;
+  }
+}
+
+@media (min-width: 525px) and (max-width: 850px) {
   .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item .step-item-number {
     height: 40px;
     width: 40px;
@@ -219,6 +227,7 @@
 }
 
 .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item .step-item-number h5 {
+  padding-top: 0.5vh;
   color: white;
 }
 
@@ -328,15 +337,13 @@
 
 .page-grid .interest {
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f6f7f8), to(white));
-  background: linear-gradient(180deg, #f6f7f8, white);
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: interest;
 }
 
 .page-grid .interest .x-container {
-  padding: 0 5%;
+  padding: 20% 5% 0% 5%;
 }
 
 .page-grid .interest .x-container .x-grid {

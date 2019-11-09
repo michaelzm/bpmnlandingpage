@@ -145,13 +145,19 @@
 
               .step-item-number {
 
-                @media (min-width: 1150px) {
+                @media (min-width: 1300px) {
                   height: 50px;
                   width: 50px;
                   margin-left: -13vw;
                 }
 
-                @media (min-width: 525px) and (max-width: 1150px) {
+                @media (min-width: 850px) and (max-width: 1300px) {
+                  height: 40px;
+                  width: 40px;
+                  margin-left: -13vw;
+                }
+
+                @media (min-width: 525px) and (max-width: 850px) {
                   height: 40px;
                   width: 40px;
                   margin-left: -14vw;
@@ -171,6 +177,7 @@
                 text-align: center;
 
                 h5 {
+                  padding-top: 0.5vh;
                   color: white;
                 }
               }
@@ -274,12 +281,12 @@
 
   .interest {
     width: 100%;
-    background: linear-gradient(180deg, rgb(246, 247, 248), white);
+    //background: linear-gradient(180deg, rgb(246, 247, 248), white);
     grid-area: interest;
 
 
     .x-container {
-      padding: 0 5%;
+      padding: 20% 5% 0% 5%;
 
       .x-grid {
         display: grid;

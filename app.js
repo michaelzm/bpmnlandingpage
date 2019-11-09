@@ -3,7 +3,7 @@ const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
     const navLinks = document.querySelectorAll(".nav-links li");
-    const page = document.querySelector(".page-grid");
+    const body = document.querySelector("body");
     const navOverlay = document.querySelector(".nav-overlay");
     burger.addEventListener("click", () => {
       nav.classList.toggle("nav-active");
@@ -19,7 +19,7 @@ const navSlide = () => {
         }
         console.log(index / 7);
       });
-
+      body.classList.toggle("prevent-scroll");
       burger.classList.toggle("toggle");
     });
   };

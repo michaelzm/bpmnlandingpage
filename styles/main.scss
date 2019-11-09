@@ -387,6 +387,10 @@ html {
   transform: translateX(0%);
 }
 
+.prevent-scroll {
+  overflow-y: hidden;
+}
+
 .nav-open {
   background: rgba(11, 14, 14, .4);
   position: fixed;
@@ -398,6 +402,7 @@ html {
   opacity: 1;
   pointer-events: none;
   transition-duration: .5s;
+  overflow-y: hidden;
 }
 
 @keyframes navLinkFade {

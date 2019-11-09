@@ -13,6 +13,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 5vh;
+  overflow-x: hidden;
 }
 
 nav .logo {
@@ -69,8 +70,8 @@ nav .logo {
 .page-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 375px;
-      grid-template-columns: 375px;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
   -ms-grid-rows: 10vh auto 10vh auto auto;
       grid-template-rows: 10vh auto 10vh auto auto;
       grid-template-areas: "." "story" '.' "steps" "features";

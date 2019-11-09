@@ -4,6 +4,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 5vh;
+  overflow-x: hidden;
 
   .logo {
     font-size: 1.4rem;
@@ -51,7 +52,7 @@ nav {
 
 .page-grid {
   display: grid;
-  grid-template-columns: 375px;
+  grid-template-columns: 100vw;
   grid-template-rows: 10vh auto 10vh auto auto;
   grid-template-areas:
     "."

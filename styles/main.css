@@ -407,10 +407,14 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
   .nav-links {
     background-color: white;
     position: absolute;

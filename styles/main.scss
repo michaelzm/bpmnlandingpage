@@ -345,11 +345,15 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 //mobile nav drawer
 @media only screen and (min-width: 300px) and (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
+
 
   .nav-links {
     background-color: white;

@@ -69,8 +69,8 @@ nav .logo {
 .page-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  -ms-grid-columns: 375px;
+      grid-template-columns: 375px;
   -ms-grid-rows: 10vh auto 10vh auto auto;
       grid-template-rows: 10vh auto 10vh auto auto;
       grid-template-areas: "." "story" '.' "steps" "features";

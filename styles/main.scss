@@ -51,7 +51,7 @@ nav {
 
 .page-grid {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 375px;
   grid-template-rows: 10vh auto 10vh auto auto;
   grid-template-areas:
     "."

@@ -21,6 +21,7 @@ nav .logo {
       -ms-grid-row-align: center;
       align-self: center;
   margin-left: 5vw;
+  z-index: 201;
 }
 
 .nav-links {
@@ -413,8 +414,8 @@ html {
     background-color: white;
     position: absolute;
     right: 0px;
-    height: 95vh;
-    top: 5vh;
+    height: 100vh;
+    top: 0;
     width: 30vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -432,18 +433,20 @@ html {
     transition: -webkit-transform 0.4s linear;
     transition: transform 0.4s linear;
     transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+    z-index: 200;
   }
   .nav-links li {
-    padding: 3vh 0 3vh 0;
+    padding: 7vh 0 3vh 0;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    height: 10vh;
+    height: 5vh;
     opacity: 0;
   }
   .nav-links li a {
     font-size: 2rem;
   }
   .burger {
+    z-index: 201;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -457,6 +460,20 @@ html {
 .nav-active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+.nav-open {
+  background: rgba(11, 14, 14, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 @-webkit-keyframes navLinkFade {

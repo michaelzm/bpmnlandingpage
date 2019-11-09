@@ -9,6 +9,7 @@ nav {
     font-size: 1.4rem;
     align-self: center;
     margin-left: 5vw;
+    z-index: 201
   }
 }
 
@@ -353,19 +354,20 @@ html {
     background-color: white;
     position: absolute;
     right: 0px;
-    height: 95vh;
-    top: 5vh;
+    height: 100vh;
+    top: 0;
     width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     transform: translateX(100%);
     transition: transform 0.4s linear;
+    z-index: 200;
 
     li {
-      padding: 3vh 0 3vh 0;
+      padding: 7vh 0 3vh 0;
       align-self: flex-start;
-      height: 10vh;
+      height: 5vh;
       opacity: 0;
 
       a {
@@ -375,6 +377,7 @@ html {
   }
 
   .burger {
+    z-index: 201;
     display: flex;
     flex-direction: column;
   }
@@ -382,6 +385,19 @@ html {
 
 .nav-active {
   transform: translateX(0%);
+}
+
+.nav-open {
+  background: rgba(11, 14, 14, .4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: none;
+  transition-duration: .5s;
 }
 
 @keyframes navLinkFade {

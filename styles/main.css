@@ -503,8 +503,8 @@ html {
 }
 
 .toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-          transform: rotate(-45deg) translate(-5px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+          transform: rotate(-45deg) translate(-5px, 5px);
 }
 
 .toggle .line2 {
@@ -512,7 +512,7 @@ html {
 }
 
 .toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
-          transform: rotate(45deg) translate(-5px, -6px);
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+          transform: rotate(45deg) translate(-5px, -5px);
 }
 /*# sourceMappingURL=main.css.map */

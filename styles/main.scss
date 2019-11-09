@@ -134,21 +134,21 @@
 
               .step-item-number {
 
-                @media (min-width: 1100px) {
+                @media (min-width: 1250px) {
                   height: 50px;
                   width: 50px;
                   margin-left: -8vw;
                 }
 
-                @media (min-width: 525px) and (max-width: 1100px) {
+                @media (min-width: 525px) and (max-width: 1250px) {
                   height: 40px;
                   width: 40px;
                   margin-left: -9vw;
                 }
 
                 @media (min-width: 300px) and (max-width: 525px) {
-                  height: 33px;
-                  width: 33px;
+                  height: 35px;
+                  width: 35px;
                   margin-left: -10.5vw;
                 }
 
@@ -289,7 +289,7 @@ html {
   }
 
   font-size: 16px;
-  font-family: MaisonNeue,
+  font-family: 'Raleway',
   sans-serif;
 }
 

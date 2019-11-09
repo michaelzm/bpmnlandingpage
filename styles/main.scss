@@ -16,6 +16,7 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30vw;
+
   li {
     list-style: none;
   }
@@ -26,6 +27,7 @@ nav {
     text-decoration: none;
   }
 }
+
 /* .burger-menu{
   height: 6vh;
   align-self: flex-end;
@@ -35,6 +37,7 @@ nav {
 .burger {
   margin-right: 3vw;
   display: none;
+
   div {
     align-items: center;
     margin: 3px;
@@ -48,17 +51,20 @@ nav {
 .page-grid {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto 10vh 1fr;
+  grid-template-rows: 10vh auto 10vh auto auto;
   grid-template-areas:
-    "story"
     "."
-    "steps";
+    "story"
+    '.'
+    "steps"
+    "features";
   width: 100%;
 
   .story {
     background-color: white;
     grid-area: story;
     width: 100%;
+
     .x-container {
       padding: 0 5%;
 
@@ -68,6 +74,7 @@ nav {
           grid-template-rows: 100%;
           grid-template-areas: "story-headline story-illustration";
         }
+
         @media only screen and (min-width: 300px) and (max-width: 1200px) {
           grid-template-columns: 100%;
           grid-template-rows: auto 1fr;
@@ -89,12 +96,14 @@ nav {
           justify-self: center;
           width: 80%;
         }
+
         .story-illustration {
           grid-area: story-illustration;
           width: 100%;
           display: flex;
           justify-content: center;
           margin-top: 5vh;
+
           /*  
         push item up on hover
          transition: transform 1s;
@@ -108,6 +117,7 @@ nav {
             border-radius: 18px;
           }
         }
+
         .story-body {
           flex-basis: 1;
           background-color: red;
@@ -131,6 +141,7 @@ nav {
         justify-content: center;
         justify-self: center;
       }
+
       .x-grid {
         margin-top: 8vh;
         grid-template-columns: 20% 80%;
@@ -168,16 +179,18 @@ nav {
 
             .step-item {
               width: 100%;
-              margin-bottom: 50px;
+
               background-color: rgb(255, 255, 255);
 
               .step-item-number {
-                @media only screen and (min-width: 1200px) {
+
+                @media (min-width: 1200px) {
                   height: 40px;
                   width: 40px;
                   margin-left: -8vw;
                 }
-                @media only screen and (min-width: 300px) and (max-width: 1200px) {
+
+                @media (min-width: 300px) and (max-width: 1200px) {
                   height: 33px;
                   width: 33px;
                   margin-left: -10vw;
@@ -198,10 +211,49 @@ nav {
               p {
                 margin-top: 1vh;
                 text-align: left;
+                margin-bottom: 10vh;
               }
             }
           }
         }
+
+      }
+    }
+  }
+
+  .features {
+    width: 100%;
+    background-color: rgb(247, 248, 249);
+    grid-area: features;
+
+    .x-container {
+      padding: 10% 5% 0 5%;
+
+      .features-headline {
+        margin: 5% 5% 5%;
+        width: 80%;
+        justify-content: center;
+        justify-self: center;
+      }
+
+      .x-grid {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 80%;
+        grid-template-areas: 'feature-1 feature-2 feature-3';
+
+        .feature-1 {
+          grid-area: feature-1;
+        }
+
+        .feature-2 {
+          grid-area: feature-2;
+        }
+
+        .feature-3 {
+          grid-area: feature-3;
+        }
+
       }
     }
   }
@@ -219,13 +271,16 @@ h2 {
   font-size: 4rem;
   line-height: 3.5rem;
 }
+
 h3 {
   font-size: 3rem;
   line-height: 3rem;
 }
+
 h4 {
   font-size: 1.9rem;
 }
+
 h5 {
   font-size: 1.7rem;
 }
@@ -234,12 +289,14 @@ html {
   @media (max-width: 58em) {
     font-size: 14px;
   }
+
   @media (max-width: 35.5em) {
     font-size: 10px;
   }
 
   font-size: 16px;
-  font-family: MaisonNeue, sans-serif;
+  font-family: MaisonNeue,
+  sans-serif;
 }
 
 * {
@@ -294,6 +351,7 @@ html {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0px);
@@ -307,6 +365,7 @@ html {
 .toggle .line2 {
   opacity: 0;
 }
+
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }

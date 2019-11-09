@@ -70,15 +70,15 @@ nav .logo {
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: auto 10vh 1fr;
-      grid-template-rows: auto 10vh 1fr;
-      grid-template-areas: "story" "." "steps";
+  -ms-grid-rows: 10vh auto 10vh auto auto;
+      grid-template-rows: 10vh auto 10vh auto auto;
+      grid-template-areas: "." "story" '.' "steps" "features";
   width: 100%;
 }
 
 .page-grid .story {
   background-color: white;
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: story;
   width: 100%;
@@ -164,7 +164,7 @@ nav .logo {
 }
 
 .page-grid .steps {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: steps;
   width: 100%;
@@ -240,7 +240,6 @@ nav .logo {
 
 .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item {
   width: 100%;
-  margin-bottom: 50px;
   background-color: white;
 }
 
@@ -253,7 +252,7 @@ nav .logo {
   text-align: center;
 }
 
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item .step-item-number {
     height: 40px;
     width: 40px;
@@ -261,7 +260,7 @@ nav .logo {
   }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1200px) {
+@media (min-width: 300px) and (max-width: 1200px) {
   .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item .step-item-number {
     height: 33px;
     width: 33px;
@@ -276,6 +275,57 @@ nav .logo {
 .page-grid .steps .x-container .x-grid .steps-grid-right .step-items .step-item p {
   margin-top: 1vh;
   text-align: left;
+  margin-bottom: 10vh;
+}
+
+.page-grid .features {
+  width: 100%;
+  background-color: #f7f8f9;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: features;
+}
+
+.page-grid .features .x-container {
+  padding: 10% 5% 0 5%;
+}
+
+.page-grid .features .x-container .features-headline {
+  margin: 5% 5% 5%;
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.page-grid .features .x-container .x-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -ms-grid-rows: 80%;
+      grid-template-rows: 80%;
+      grid-template-areas: 'feature-1 feature-2 feature-3';
+}
+
+.page-grid .features .x-container .x-grid .feature-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: feature-1;
+}
+
+.page-grid .features .x-container .x-grid .feature-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: feature-2;
+}
+
+.page-grid .features .x-container .x-grid .feature-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: feature-3;
 }
 
 p {
